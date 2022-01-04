@@ -38,6 +38,9 @@
 .text-gold {
     color: var(--gold);
   }
+.text-gold:hover {
+  color: var(--gold);
+}
 .bg-transparent{
     background-color: transparent;
 }
@@ -73,6 +76,7 @@ a:hover {
 }
 .top-nav-icon{
     color: var(--gold)!important;
+    font-size: 20px;
     cursor: pointer;
     padding: 0px 5px;
   }
@@ -82,7 +86,7 @@ a:hover {
     overflow-y: hidden;
   }
   
-  .login-btn{
+  .login-btn , .login-center-btn{
     width: 100%;
     color: var(--white);
     background-color: transparent;
@@ -94,9 +98,14 @@ a:hover {
     font-weight: 600;
     font-size: 1rem;
   }
-  .login-btn:hover{
+  .login-btn:hover , .login-center-btn:hover{
     background-color: var(--purple);
   }
+
+.disabled-btn:hover{
+  background-color: transparent!important;
+  
+}
 .login-title{
     font-size: 0.8rem;
 }
@@ -213,7 +222,7 @@ a:hover {
   text-decoration: none;
 }
  .back-btn {
-  color: var(--gold);
+  color: var(--gold)!important;
   text-transform: uppercase;
   font-weight: 600;
   text-decoration: none;
@@ -348,10 +357,12 @@ a:hover {
   font-weight: 600;
 }
 .top-nav-menu .right-menu .show {
-  border-radius: 15px !important;
+  border-radius: 15px !important;    background-color: #1A1212;
   /* border: 1px solid #000; */
   padding: 10px 0px;
-  box-shadow: 0px 5px 5px -3px rgb(0 0 0 / 20%), 0px 8px 10px 1px rgb(0 0 0 / 14%), 0px 3px 14px 2px rgb(0 0 0 / 12%);
+  /* box-shadow: 0px 5px 5px -3px rgb(0 0 0 / 20%), 0px 8px 10px 1px rgb(0 0 0 / 14%), 0px 3px 14px 2px rgb(0 0 0 / 12%); */
+  box-shadow: 0px 5px 5px -3px rgb(232 232 232 / 20%), 0px 8px 10px 1px rgb(242 242 242 / 14%), 0px 3px 14px 2px rgb(0 0 0 / 12%);
+  
 }
 .top-nav-menu .right-menu .dropdown-item {
   font-size: 15px;
@@ -421,6 +432,15 @@ a:hover {
 .dashboard-content .border-right{
     border-right: 0.5px solid var(--gold) !important;
 }
+
+.vl {
+  border-left: 1px solid #fff;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 .card-style{
     border-radius: 10px;
     /* border: 1px solid #00000066; */
@@ -439,7 +459,7 @@ a:hover {
   background-color: transparent;
   background-image: none;
   border-color: var(--yellow);
-  padding: 2px 10px;
+  padding: 5px 10px;
   border-radius: 5px;
   border: 1px solid var(--yellow);
   text-transform: uppercase;
@@ -447,7 +467,9 @@ a:hover {
   text-decoration: none;
 }
 .btn-outline-receive:hover{
-    color: var(--gold);
+  background-color: #D99A26;
+    color: var(--white);
+    font-weight: 300;
 }
 .btn-outline-send {
   color: var(--green);
@@ -570,6 +592,7 @@ a:hover {
 /* Dashboard Tab CSS */
 .dashboard-content{
     background: #121116!important;
+    height: 100vh;
 }
 .dashboard-content .nav-tabs {
   border-bottom: 1px solid #313740;
@@ -739,6 +762,10 @@ a:hover {
 /* Media Query Mobile-Tab */
 
 @media only screen and (min-width: 1200px) {
+  .login-box-content{
+    /* overflow: hidden!important; */
+    /* height: 91vh!important; */
+  }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -899,11 +926,18 @@ a:hover {
   .form-check {
     text-align: left;
   }
+
+  .mobile-center{
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 /* Max Width 767px */
 @media only screen and (max-width: 767px) {
-
+  .login-center-btn{
+    width: 100%!important;
+  }
     .login-btn{
         font-size: 0.8rem;
       }
